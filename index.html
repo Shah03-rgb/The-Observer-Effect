@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Observer Effect // The Game That Learns You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient Interactive Particle & Starfield Canvas -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Interactive Ambient Cursor Glow Aura -->
+    <div id="cursor-aura"></div>
+
+    <main id="app">
+        <!-- Header & Environmental Status -->
+        <header>
+            <div class="system-tag">
+                <span class="pulsing-orb"></span>
+                <span id="header-status">THE OBSERVER EFFECT // NEURAL RESONANCE</span>
+            </div>
+            <div class="header-right">
+                <span class="telemetry-pill" id="trial-counter">TRIAL 1/36</span>
+                <span class="telemetry-pill" id="phase-indicator">PHASE 01: CALIBRATION</span>
+                <button id="sound-toggle" class="sound-btn" title="Toggle Calming Audio">AUDIO: ON</button>
+            </div>
+        </header>
+
+        <!-- Prediction Confidence Meter (Soft Glassmorphic Resonance) -->
+        <section id="meter-container" class="meter-container hidden">
+            <div class="meter-wrapper">
+                <div class="meter-side system-side">
+                    <div class="meter-info">
+                        <span class="meter-name">SYSTEM INSIGHT</span>
+                        <span id="system-confidence-val" class="meter-val">52%</span>
+                    </div>
+                    <div class="meter-track">
+                        <div id="system-confidence-fill" class="meter-fill system" style="width: 52%;"></div>
+                    </div>
+                </div>
+
+                <!-- Central Interactive Resonance Core -->
+                <div class="resonance-core-wrap" title="Neural Resonance Core">
+                    <div id="resonance-core" class="resonance-core">
+                        <div class="core-inner"></div>
+                    </div>
+                </div>
+
+                <div class="meter-side player-side">
+                    <div class="meter-info">
+                        <span class="meter-name">YOUR DEFIANCE</span>
+                        <span id="player-confidence-val" class="meter-val">48%</span>
+                    </div>
+                    <div class="meter-track">
+                        <div id="player-confidence-fill" class="meter-fill player" style="width: 48%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Central Arena -->
+        <section class="main-stage">
+            <!-- Gentle AI Thought Bubble / Prediction Banner -->
+            <div id="prediction-banner" class="prediction-banner hidden">
+                <div class="prediction-badge">
+                    <span class="sparkle-icon">✦</span>
+                    <span>AI FORESIGHT</span>
+                </div>
+                <div id="prediction-text" class="prediction-text">“I sense you will choose LEFT.”</div>
+            </div>
+
+            <!-- Triple Oracle Forecast Sequence -->
+            <div id="triple-oracle-hud" class="triple-oracle-hud hidden">
+                <div class="triple-title">TRIPLE PROPHECY SEQUENCE</div>
+                <div id="triple-badges" class="triple-badges">
+                    <!-- Dynamic badges injected via JS -->
+                </div>
+            </div>
+
+            <!-- Prompt & Calming Subtext -->
+            <div class="prompt-box">
+                <h1 id="prompt-title" class="prompt-title">Make a choice.</h1>
+                <p id="prompt-subtext" class="prompt-subtext">Take your time. Listen to your instinct.</p>
+            </div>
+
+            <!-- Calming Breathing Countdown -->
+            <div id="countdown-bar" class="countdown-bar hidden">
+                <div id="countdown-fill" class="countdown-fill"></div>
+            </div>
+
+            <!-- Interactive Choice Arena with Magnetic Tilt & Ripple -->
+            <div id="choice-arena" class="choice-arena">
+                <button id="btn-left" class="choice-btn" data-slot="0">
+                    <span class="btn-ripple-container"></span>
+                    <span class="choice-label">LEFT</span>
+                    <span class="key-hint">A &nbsp;•&nbsp; ←</span>
+                </button>
+
+                <!-- Soft Interactive Center Balance Filament -->
+                <div class="balance-filament" id="balance-filament"></div>
+
+                <button id="btn-right" class="choice-btn" data-slot="1">
+                    <span class="btn-ripple-container"></span>
+                    <span class="choice-label">RIGHT</span>
+                    <span class="key-hint">D &nbsp;•&nbsp; →</span>
+                </button>
+
+                <!-- Hidden Rule Refusal Button -->
+                <button id="btn-hidden-refuse" class="hidden-refuse-btn hidden">
+                    <span>✦ REFUSE THE BINARY ILLUSION ✦</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Calming Ambient Telemetry / Thoughts -->
+        <footer class="terminal-section">
+            <div class="terminal-header">
+                <span>CONSCIOUSNESS TELEMETRY</span>
+                <span class="terminal-live-dot"></span>
+            </div>
+            <div id="terminal-log" class="terminal-log">
+                <div class="terminal-line">> Neural link established. Atmosphere calibrated to serenity.</div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Psychological Dossier & Ending Modal -->
+    <div id="dossier-modal" class="modal-backdrop hidden">
+        <div class="dossier-card">
+            <div id="dossier-content">
+                <!-- Injected ending evaluation & charts -->
+            </div>
+            <div class="dossier-actions">
+                <button id="btn-export" class="action-btn">EXPORT DOSSIER (JSON)</button>
+                <button id="btn-restart" class="action-btn primary">RE-ENTER SIMULATION</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="audio.js"></script>
+    <script src="playerModel.js"></script>
+    <script src="oracle.js"></script>
+    <script src="scenarios.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
